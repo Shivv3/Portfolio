@@ -44,7 +44,7 @@ export const AboutSection = () => {
 
                                 {/* Content */}
                                 <div className="text-left">
-                                    <h4 className="text-semibold tex-lg">Web Development</h4>
+                                    <h4 className="font-semibold text-lg">Web Development</h4>
                                     <p className="text-muted-foreground">
                                         Creating Responsive websites and web Applications with modern technologies like React, Node.js, and Express.
                                     </p>
@@ -64,7 +64,7 @@ export const AboutSection = () => {
                                 
                                 {/* Content */}
                                 <div className="text-left">
-                                    <h4 className="text-semibold tex-lg">UI/UX Design</h4>
+                                    <h4 className="font-semibold text-lg">UI/UX Design</h4>
                                     <p className="text-muted-foreground">
                                         Designing intuitive and user-friendly interfaces that enhance user experience and engagement.
                                     </p>
@@ -75,8 +75,18 @@ export const AboutSection = () => {
 
                         <div className="gradient-border p-6 card-hover bg-foreground/10 ">
                             <div className="flex items-start gap-4">
+
+                                {/* Logo of Briefcase: */}
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Briefcase className = "h-6 w-6 text-primary"/>
+                                </div>
+
+                                {/* Content: */}
+                                <div className="text-left">
+                                    <h4 className="font-semibold text-lg">Project Management</h4>
+                                    <p className="text-muted-foreground">
+                                        Leading projects from conception to completion, ensuring timely delivery and quality standards.
+                                    </p>
                                 </div>
                             </div>
                         </div>
