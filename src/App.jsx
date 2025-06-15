@@ -6,7 +6,6 @@ function App() {
 
   return (
     <>
-
     {/* Defining the brower routes: */}
     <BrowserRouter>
       <Routes>
