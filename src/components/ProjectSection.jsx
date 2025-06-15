@@ -1,4 +1,4 @@
-
+ 
 import {ArrowRight, ExternalLink,Github} from "lucide-react"
 
 //An array of projects to be displayed in the ProjectSection component:
