@@ -8,7 +8,7 @@ export const Footer = () => {
 
         <button>
             <a href="#home" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors">
-                <ArrowUp/>
+                <ArrowUp size = {20}/>
             </a>
         </button>
 
