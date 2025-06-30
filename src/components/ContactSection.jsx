@@ -1,8 +1,10 @@
-import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Send, Github } from "lucide-react";
 import { cn } from '../lib/utils';
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export const ContactSection = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -25,12 +27,35 @@ export const ContactSection = () => {
         setMessage("");
     };
 
+    // Detect when the section is in view
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section
             id="contact"
             className="py-24 px-4 relative bg-secondary/30"
+            ref={sectionRef}
         >
-            <div className="container mx-auto max-w-5xl">
+            <div className={cn("container mx-auto max-w-5xl", isVisible ? "opacity-100 animate-fade-in" : "opacity-0")}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     Get in <span className="text-primary"> Touch</span>
                 </h2>
@@ -40,67 +65,58 @@ export const ContactSection = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="space-y-8">
+                    <div className={`space-y-8 ${isVisible ? "opacity-100 animate-slide-in-left" : "opacity-0"}`}>
                         <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
                         <div className="space-y-6 justify-center">
-
                             <div className="flex items-start space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Mail className="h-6 w-6 text-primary" />{" "}
+                                    <Mail className="h-6 w-6 text-primary" />
                                 </div>
-
                                 <div>
                                     <h4 className="font-medium">Email</h4>
                                     <a href="mailto:shivam2048sinha@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">shivam2048sinha@gmail.com</a>
                                 </div>
-
                             </div>
 
                             <div className="flex items-start space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Phone className="h-6 w-6 text-primary" />{" "}
+                                    <Phone className="h-6 w-6 text-primary" />
                                 </div>
-
                                 <div>
                                     <h4 className="font-medium">Phone</h4>
                                     <a href="tel:8091771365" className="text-muted-foreground hover:text-primary transition-colors">+91-8091771365</a>
                                 </div>
-
                             </div>
-
 
                             <div className="flex items-start space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <MapPin className="h-6 w-6 text-primary" />{" "}
+                                    <MapPin className="h-6 w-6 text-primary" />
                                 </div>
-
                                 <div>
                                     <h4 className="font-medium">Location</h4>
                                     <a className="text-muted-foreground hover:text-primary transition-colors">New Delhi</a>
                                 </div>
-
                             </div>
-
-
                         </div>
 
                         <div className="pt-8">
                             <h4 className="font-medium mb-4">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <a href="" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/shivam-sinha-12077b2b5/" target="_blank" rel="noopener noreferrer">
                                     <Linkedin />
                                 </a>
-                                <a href="" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/_shivam.sinha_/" target="_blank" rel="noopener noreferrer">
                                     <Instagram />
                                 </a>
+                                <a href="https://github.com/Shivv3" target="_blank" rel="noopener noreferrer">
+                                    <Github />
+                                </a>
                             </div>
-
                         </div>
-
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <div className={`bg-card p-8 rounded-lg shadow-xs ${isVisible ? "opacity-100 animate-slide-in-right" : "opacity-0"}`}>
                         <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
                         <form className="space-y-6" onSubmit={handleSubmit}>
@@ -153,10 +169,8 @@ export const ContactSection = () => {
                                 Send Message
                                 <Send size={16} />
                             </button>
-
                         </form>
                     </div>
-
                 </div>
             </div>
         </section>

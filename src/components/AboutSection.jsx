@@ -1,9 +1,34 @@
-import { Briefcase, Code, Milestone, User } from "lucide-react"
-
+import { Briefcase, Code, Milestone } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export const AboutSection = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    // Detect when the section is in view
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <section id = "about" className="py-24 px-4 relative">
+        <section id="about" className="py-24 px-4 relative" ref={sectionRef}>
             <div className="container mx-auto max-w-5xl">
 
                 {/* About Me Heading: */}
@@ -17,8 +42,7 @@ export const AboutSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
 
                     {/* About me Description: LEFT SECTION: */}
-                    <div className="space-y-6">
-
+                    <div className={`space-y-6 ${isVisible ? "opacity-100 animate-slide-in-left" : "opacity-0"}`}>
                         <p className="text-muted-foreground">Hii, I'm Shivam Sinha — a <span className="font-semibold">Software Engineering</span> student at DTU <span className="font-semibold">(CGPA: 9.48)</span>, passionate about building scalable and intelligent tech solutions.</p>
 
                         <p className="text-muted-foreground">With certifications from <span className="font-semibold">Stanford</span> in Machine Learning, I specialize in <span className="font-semibold">ML, NLP, React, Tailwind CSS and problem-solving</span>. I've actively participated and achieved a <span className="font-semibold">RunnerUp</span> position at <span className="font-semibold">JPMorgan Code for Good Hackathon'25 in Mumbai</span>. I've solved <span className="font-semibold">500+ DSA problems</span>  on LeetCode (Top 13%).</p>
@@ -42,8 +66,7 @@ export const AboutSection = () => {
                     </div>
 
                     {/* About Me Image: RIGHT SECTION: */}
-                    <div className="grid grid-cols-1 gap-6">
-
+                    <div className={`grid grid-cols-1 gap-6 ${isVisible ? "opacity-100 animate-slide-in-right" : "opacity-0"}`}>
                         {/* Containing the skills related to code: */}
                         <div className="gradient-border p-6 card-hover bg-foreground/10">
                             <div className="flex items-start gap-4">

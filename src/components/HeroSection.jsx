@@ -1,5 +1,4 @@
-import { ArrowBigDown } from "lucide-react";
-import profileImage from "../assets/images/profile.png";
+import { ArrowBigDown } from "lucide-react"
 
 export const HeroSection = () => {
     return (
@@ -11,15 +10,15 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/4 flex justify-center items-center mb-8 md:mb-0 relative">
                     <div className="relative z-10">
                         <img
-                            src={profileImage}
+                            src="./src/assets/images/profile.png"
                             alt="Shivam Sinha"
-                            className="rounded-full w-80 h-80 object-cover shadow-lg scale-90 hover:scale-100 transition-transform duration-300 ease-in-out md:scale-120 md:hover:scale-130"
+                            className="rounded-full w-80 h-80 object-cover shadow-lg scale-90 hover:scale-100 transition-transform duration-300 ease-in-out md:scale-120 md:hover:scale-130 animate-slide-in-left"
                         />
                     </div>
                 </div>
 
                 {/* Right: Existing Hero Content */}
-                <div className="w-full md:w-3/4 flex flex-col items-center">
+                <div className="w-full md:w-3/4 flex flex-col items-center animate-slide-in-right space-y-6 md:space-y-8">
                     {/* Heading & Description */}
                     <div className="w-full text-center flex flex-col items-center space-y-6">
                         {/* Heading */}
