@@ -7,7 +7,7 @@ const certifications = [
         title: "JPMorgan Code for Good Mumbai",
         name: "Runner-Up Certificate",
         description: "Were among the Top 2 best teams in our problem statement among 30+ national finalist teams, shortlisted from 50,000+ applicants, for developing a collaboration platform to streamline NGO-led teaching in government schools.",
-        image: "/src/assets/certificates/certificate1.png",
+        image: "/assets/certificates/certificate1.png",
         link: "https://drive.google.com/file/d/1s2LpDZXGduTe2kZTei1f239abk35dp4m/view?usp=sharing"
     },
     {
@@ -15,7 +15,7 @@ const certifications = [
         title: "Mobile App Design in Figma",
         name: "Udemy",
         description: "Designed mobile app interfaces in Figma, from wireframes to interactive prototypes, focusing on user experience.",
-        image: "/src/assets/certificates/figma-design.png",
+        image: "/assets/certificates/figma-design.png",
         link: "https://www.udemy.com/certificate/figma-design"
     },
     {
@@ -23,7 +23,7 @@ const certifications = [
         title: "Introduction to Figma",
         name: "Simplilearn",
         description: "Completed a beginner-level course on Figma, covering UI design, prototyping, and collaborative workflows.",
-        image: "/src/assets/certificates/figma-intro.png",
+        image: "/assets/certificates/figma-intro.png",
         link: "https://www.simplilearn.com/certificate/figma-intro"
     },
     {
@@ -31,7 +31,7 @@ const certifications = [
         title: "Foundations of Web Development",
         name: "Udemy",
         description: "Learned web development basics using CSS, React, Bootstrap, and JavaScript to build responsive, interactive interfaces.",
-        image: "/src/assets/certificates/web-development.png",
+        image: "/assets/certificates/web-development.png",
         link: "https://www.udemy.com/certificate/web-development"
     },
     {
@@ -39,7 +39,7 @@ const certifications = [
         title: "Advanced React",
         name: "Coursera",
         description: "Mastered advanced React concepts, including hooks, context API, and performance optimization.",
-        image: "/src/assets/certificates/react-advanced.png",
+        image: "/assets/certificates/react-advanced.png",
         link: "https://www.coursera.org/certificate/react-advanced"
     },
     {
@@ -47,7 +47,7 @@ const certifications = [
         title: "Machine Learning",
         name: "Stanford University",
         description: "Completed a comprehensive course on machine learning, covering supervised and unsupervised learning techniques.",
-        image: "/src/assets/certificates/machine-learning.png",
+        image: "/assets/certificates/machine-learning.png",
         link: "https://www.coursera.org/certificate/machine-learning"
     }
 ];
