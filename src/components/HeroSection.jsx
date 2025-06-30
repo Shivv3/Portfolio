@@ -10,7 +10,7 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/4 flex justify-center items-center mb-8 md:mb-0 relative">
                     <div className="relative z-10">
                         <img
-                            src="/assets/images/profile.png" // Updated path
+                            src="src\assets\images\profile.png" // Updated path
                             alt="Shivam Sinha"
                             className="rounded-full w-80 h-80 object-cover shadow-lg scale-90 hover:scale-100 transition-transform duration-300 ease-in-out md:scale-120 md:hover:scale-130 animate-slide-in-left"
                         />
