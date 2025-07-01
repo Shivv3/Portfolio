@@ -13,6 +13,7 @@ import certificate4 from "../assets/certificates/certificate4.png";
 import certificate5 from "../assets/certificates/certificate5.png";
 import certificate6 from "../assets/certificates/certificate6.png";
 import certificate7 from "../assets/certificates/certificate7.png";
+import { ArrowRight } from "lucide-react"; // Import ArrowRight icon
 
 
 const certificates = [
@@ -95,8 +96,8 @@ export const AchievementSlider = () => {
       <StarBackground />
 
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold animate-fade-in-delay-1">
-          <span className="text-primary animate-fade-in-delay-2">My Achievements</span> & Certifications
+        <h2 className="text-3xl font-bold animate-slide-in">
+          <span className="text-primary animate-slide-in">My Achievements</span> & Certifications
         </h2>
       </div>
       <div className="max-w-7xl mx-auto px-4">
@@ -149,9 +150,20 @@ export const AchievementSlider = () => {
           ))}
         </Swiper>
       </div>
+
+      {/* Check All Certificates Button */}
+      <div className="text-center mt-6">
+        <a
+          href="https://drive.google.com/drive/folders/1NuKAuDWhBD8eqlhgmElGllXKKp2Y9Rx9?usp=sharing"
+          className="cosmic-button w-fit flex items-center mx-auto gap-2 animate-slide-in"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check All Certificates <ArrowRight size={16} />
+        </a>
+      </div>
     </section>
   );
 };
-
 
 export default AchievementSlider;

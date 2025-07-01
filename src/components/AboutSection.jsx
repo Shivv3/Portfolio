@@ -39,34 +39,41 @@ export const AboutSection = () => {
                 <h2 className="text-2xl font-bold mb-8">Driven by Data, Defined by Design, Blended with Logic</h2>
 
                 {/* About Me Content*/}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left text-xs font-semibold">
 
                     {/* About me Description: LEFT SECTION: */}
-                    <div className={`space-y-6 ${isVisible ? "opacity-100 animate-slide-in-left" : "opacity-0"}`}>
-                        <p className="text-muted-foreground">Hii, I'm Shivam Sinha — a <span className="font-semibold">Software Engineering</span> student at DTU <span className="font-semibold">(CGPA: 9.48)</span>, passionate about building scalable and intelligent tech solutions.</p>
+                    <div className={`space-y-3 ${isVisible ? "opacity-100 animate-slide-in-left" : "opacity-0"}`}>
+                        <p className="text-muted-foreground">Hey there! I’m Shivam Sinha 👋 — a curious coder, machine learner, and design thinker from DTU (🧑‍🎓 CGPA: 9.48).</p>
 
-                        <p className="text-muted-foreground">With certifications from <span className="font-semibold">Stanford</span> in Machine Learning, I specialize in <span className="font-semibold">ML, NLP, React, Tailwind CSS and problem-solving</span>. I've actively participated and achieved a <span className="font-semibold">RunnerUp</span> position at <span className="font-semibold">JPMorgan Code for Good Hackathon'25 in Mumbai</span>. I've solved <span className="font-semibold">500+ DSA problems</span>  on LeetCode (Top 13%).</p>
+                        <p className="text-muted-foreground">I turn ideas into impact using a mix of 🧠 logic, 🤖 machine learning, 🎨 frontend flair, and a ton of ☕ coffee! I’ve solved 900+ DSA puzzles 🧩, trained models to read resumes 📄, detect hate speech 💬, and even classify logs using BERT + GenAI 🔍⚡.</p>
 
-                        <p className="text-muted-foreground text-left">Some of my recent work includes:</p>
+                        <p className="text-muted-foreground text-left">Currently interning at Bira91 🍺, I’m structuring chaotic supply chain data with SAP and making it ready for dashboards 📊.</p>
+                        <p className="text-muted-foreground text-left">🛠️ My stack?</p>
                         <ul className="list-disc list-inside text-muted-foreground space-y-1 pl-4 text-start font-semibold">
-                            <li>Resume Classifier using NLP</li>
-                            <li>Hate Speech Detection with ML, Deep Learning and NLP</li>
+                            <li>Frontend: React ⚛️ + Tailwind 💅</li>
+                            <li>Backend: Python 🐍 + FastAPI 🚀</li>
+                            <li>ML/AI: Scikit-learn 📘, TensorFlow 🔢, BERT 🧠, GenAI 🔮</li>
+                        </ul>
+                        <p className="text-muted-foreground text-left">🏆 Highlights:</p>
+                        <ul className="list-disc list-inside text-muted-foreground space-y-1 pl-4 text-start font-semibold">
+                            <li>🥈 Runner-Up @ JPMorgan Code for Good Mumbai (Top 2 out of 30+ finalists!)</li>
+                            <li>🎙️ Quarterfinalist & Adjudicator @ IIT Bombay’s British Parliamentary Debate</li>
+                            <li>🚀 Built & Deployed SmartLog AI — a GenAI log classifier with 50+ unsupervised clusters</li>
+                            <li>🧠 Cracked 900+ DSA problems across LeetCode, Codeforces, GFG, Code360</li>
                         </ul>
 
-                        <p>Beyond code, my communication game is just as strong — I've reached final rounds at IIT Bombay's British Parliamentary Debate, proving that I can both talk the talk and walk the tech.</p>
-
-                        <p className="text-muted-foreground">Whether it's a model, interface, or algorithm — I build with purpose, precision, and passion.</p>
+                        <p>Off the clock? I love decoding debates 🎤 as much as debugging code 🐞. Let’s just say — if it’s complex, meaningful, or fun, I’m all in! 💪🎯</p>
 
                         {/* Creating buttons to reach out to my ids and personal ids: */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button"> Get in Touch</a>
 
-                            <a href="/FinalYear-Resume.pdf" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-white transition-colors duration-600" download>Download CV</a>
+                            <a href="/public/2K25_Resume.pdf" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-white transition-colors duration-600" download>Download CV</a>
                         </div>
                     </div>
 
                     {/* About Me Image: RIGHT SECTION: */}
-                    <div className={`grid grid-cols-1 gap-6 ${isVisible ? "opacity-100 animate-slide-in-right" : "opacity-0"}`}>
+                    <div className={`grid grid-cols-1 gap-6 min-w-[500px] text-xs ${isVisible ? "opacity-100 animate-slide-in-right" : "opacity-0"}`}>
                         {/* Containing the skills related to code: */}
                         <div className="gradient-border p-6 card-hover bg-foreground/10">
                             <div className="flex items-start gap-4">
@@ -78,9 +85,10 @@ export const AboutSection = () => {
 
                                 {/* Content */}
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Frontend Development</h4>
+                                    <h4 className="font-semibold text-lg mb-2">🖥️ Frontend Magic ✨</h4>
+                                    <h4 className="font-semibold text-base mb-1">Bringing ideas to life, one pixel at a time</h4>
                                     <p className="text-muted-foreground">
-                                        Building beautiful, responsive, and user-centric web applications. Using <span className="font-semibold">React, Tailwind CSS, HTML/CSS, and JavaScript</span>, I craft interfaces that aren't just visually sleek but also blazing fast. From wireframes to deployment.
+                                       I craft responsive & smooth UIs using React ⚛️, Tailwind CSS 💅, and JS. From interactive dashboards to sleek components, I love making things that feel as good as they look! 🎨📱
                                     </p>
                                 </div>
 
@@ -98,9 +106,10 @@ export const AboutSection = () => {
                                 
                                 {/* Content */}
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Machine Learning & NLP</h4>
+                                    <h4 className="font-semibold text-lg mb-2">🤖 Machine Learning & GenAI 🔮</h4>
+                                    <h4 className="font-semibold text-base mb-1">Training models to do human things</h4>
                                     <p className="text-muted-foreground">
-                                        With hands-on experience in <span className="font-semibold">Scikit-learn, TensorFlow, BERT, and NLTK</span>, I build smart systems that interpret and analyze human language. From classifying thousands of resumes with 99% accuracy to detecting hate speech with deep learning — I engineer models that understand and respond to the world.
+                                        Whether it’s BERT reading logs 📄, TF-IDF matching resumes 🧾, or GenAI explaining errors 🤯 — I build intelligent apps with real-world impact. Powered by TensorFlow 🔢, Sklearn 📘, and a lot of data! 📊
                                     </p>
                                 </div>
                                 
@@ -117,9 +126,10 @@ export const AboutSection = () => {
 
                                 {/* Content: */}
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Data Structures & Algorithms</h4>
+                                    <h4 className="font-semibold text-lg mb-2">🧠 DSA + Problem Solving ⚔️</h4>
+                                    <h4 className="font-semibold text-base mb-1">Because clean code starts with smart thinking</h4>
                                     <p className="text-muted-foreground">
-                                        Problem-solving is my superpower. With 500+ problems solved on LeetCode and a solid grip on core concepts like dynamic programming, graphs, and greedy algorithms
+                                        I’ve solved over 900+ problems on LeetCode, GFG & Codeforces — from DP 🧩 to Graphs 🌐. It’s like brain yoga 🧘‍♂️ but with bugs and breakpoints 😅.
                                     </p>
                                 </div>
                             </div>

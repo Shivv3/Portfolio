@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import project1 from '../assets/projects/project1.png';
 import project2 from '../assets/projects/project2.png'; 
 import project3 from '../assets/projects/project3.png';
+import project4 from '../assets/projects/project4.png';
 
 //An array of projects to be displayed in the ProjectSection component:
 const projects = [
@@ -34,6 +35,16 @@ const projects = [
         tags: ["Python", "FastAPI", "HTML", "CSS", "JavaScript", "Scikit-learn", "NLP", "TensorFlow", "Regex", "WordCloud", "Docker", "Git"],
         demoUrl: "https://drive.google.com/file/d/1gv13ph3lGNSg6I8k3GayTkGJSaUdKUiS/view?usp=sharing",
         githubUrl: "https://github.com/Shivv3/Resume_Analyzer_Project"
+    },
+
+    {
+        id: 3,
+        title: "Portfolio Website",
+        description: `Built an interactive portfolio website to showcase my projects, skills, and experience. The website features a modern design, smooth animations, and a responsive layout for optimal viewing on all devices.`,
+        image: project4,
+        tags: ["JavaScript", "React", "Tailwind CSS", "Git"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/Shivv3/Portfolio"
     }
 ];
 
@@ -112,31 +123,29 @@ export const ProjectSection = () => {
 
                             {/* Title and Description */}
                             <div
-                                className="p-4 border-t border-secondary/10 opacity-0 animate-fade-in"
+                                className="p-2 border-t border-secondary/10 opacity-0 animate-fade-in mb-8"
                                 style={{ animationDelay: `${index * 0.4}s` }}
                             >
-                                <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+                                <h3 className="text-xl mb-4 font-bold">{project.title}</h3>
                                 <p className="text-muted-foreground text-sm mb-1">{project.description}</p>
                             </div>
 
                             {/* Links */}
-                            <div className="flex justify-between items-center">
-                                <div className="flex space-x-4 p-3">
-                                    <a
-                                        href={project.demoUrl}
-                                        target="_blank"
-                                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                    >
-                                        <ExternalLink size={20} />
-                                    </a>
-                                    <a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                    >
-                                        <Github size={20} />
-                                    </a>
-                                </div>
+                            <div className="absolute bottom-4 left-4 flex space-x-4">
+                                <a
+                                    href={project.demoUrl}
+                                    target="_blank"
+                                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                >
+                                    <ExternalLink size={20} />
+                                </a>
+                                <a
+                                    href={project.githubUrl}
+                                    target="_blank"
+                                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                >
+                                    <Github size={20} />
+                                </a>
                             </div>
                         </div>
                     ))}
@@ -145,7 +154,7 @@ export const ProjectSection = () => {
                 {/* GitHub Link */}
                 <div className="text-center mt-12">
                     <a
-                        href="https://github.com/Shivv3"
+                        href="https://github.com/Shivv3" 
                         className="cosmic-button w-fit flex items-center mx-auto gap-2"
                         target="_blank"
                     >
