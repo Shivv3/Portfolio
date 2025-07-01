@@ -1,5 +1,8 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import project1 from '../assets/projects/project1.png';
+import project2 from '../assets/projects/project2.png'; 
+import project3 from '../assets/projects/project3.png';
 
 //An array of projects to be displayed in the ProjectSection component:
 const projects = [
@@ -9,7 +12,7 @@ const projects = [
         description: `A Robust hate speech detection model leveraging both traditional machine 
                         learning (Logistic Regression, Random Forest, Gradient Boosting) and advanced deep learning 
                         techniques (Neural Networks).`,
-        image: "/assets/projects/project1.png", // Updated path
+        image: project1,
         tags: ["HTML", "CSS", "JavaScript", "BERT", "Scikit-Learn", "Flask", "TensorFlow","Natural Language Processing", "Git", "Docker"],
         demoUrl: "#",
         githubUrl: "https://github.com/komal2203/nlp_project"
@@ -18,7 +21,7 @@ const projects = [
         id: 2,
         title: "SmartLog Classifier AI",
         description: `Built a 3-way hybrid log classification system using Regex, BERT, and GenAI (Gemini 2.5 Flash) to process 2,500+ logs from 6 systems. Features a dynamic React.js dashboard for log processing, stats visualization, and categorized output downloads.`,
-        image: "/assets/projects/project2.png", // Updated path
+        image: project2,
         tags: ["Python", "NLP", "FastAPI", "React.js", "Tailwind CSS", "Vite", "BERT", "Gen-AI", "Regex", "Joblib", "Git", "Docker"],
         demoUrl: "https://drive.google.com/file/d/1bb_JI3DcNXefgUKthANVY5fGdQGy3zDH/view?usp=sharing",
         githubUrl: "https://github.com/Shivv3/log-classification-system"
@@ -27,7 +30,7 @@ const projects = [
         id: 3,
         title: "JobMatch Pro",
         description: `Built an interactive dashboard for resume analysis, enabling users to upload resumes, view predictions with confidence scores, and track recent predictions. Achieved 90% accuracy using Logistic Regression, Random Forest, and Neural Network models.`,
-        image: "/assets/projects/project3.png", // Updated path
+        image: project3,
         tags: ["Python", "FastAPI", "HTML", "CSS", "JavaScript", "Scikit-learn", "NLP", "TensorFlow", "Regex", "WordCloud", "Docker", "Git"],
         demoUrl: "https://drive.google.com/file/d/1gv13ph3lGNSg6I8k3GayTkGJSaUdKUiS/view?usp=sharing",
         githubUrl: "https://github.com/Shivv3/Resume_Analyzer_Project"

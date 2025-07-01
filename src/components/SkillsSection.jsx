@@ -143,7 +143,7 @@ export const SkillsSection = () => {
                                 "bg-card p-4 rounded-md shadow-xs card-hover opacity-0",
                                 isVisible ? "animate-fade-in" : ""
                             )}
-                            style={{ animationDelay: `${key * 0.1}s` }}
+                            style={{ animationDelay: `${key * 0.05}s` }}
                         >
 
                             {/* A div contain skill name + skill% */}

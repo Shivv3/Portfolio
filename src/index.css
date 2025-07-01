@@ -214,11 +214,11 @@
 }
 
 .animate-slide-in-left {
-    animation: slide-in-left 1s ease-out forwards;
+    animation: slide-in-left 0.5s ease-out forwards;
 }
 
 .animate-slide-in-right {
-    animation: slide-in-right 1s ease-out forwards;
+    animation: slide-in-right 0.5s ease-out forwards;
 }
 
 

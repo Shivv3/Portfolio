@@ -7,7 +7,7 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectSection } from "../components/ProjectSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
-import { AchievementsSection } from "../components/AchievementsSection";
+import { AchievementSlider } from "../components/AchievementSlider";
 
 export const Home = () => {
     return (
@@ -27,7 +27,7 @@ export const Home = () => {
                 <AboutSection />
                 <SkillsSection />
                 <ProjectSection />
-                <AchievementsSection />
+                <AchievementSlider />
                 <ContactSection />
             </main>
 
